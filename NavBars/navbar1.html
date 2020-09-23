@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>navigation bar1</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+
+
+    <style>
+
+html {
+  box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url(img.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+ }
+
+.navigation{
+  height:100%;
+  width: 100px;
+  background-color: white;
+  border-radius: 0% 50% 350% 0%;
+  transition: all 800ms cubic-bezier(.9,0,.33,1);
+}
+
+.navigation__icon{
+  width: 55px;
+  height: 44px;
+  position: relative;
+  top: 25%;
+  left: 35%;
+  cursor: pointer; 
+  transition: all 800ms cubic-bezier(.9,0,.33,1); 
+}
+
+.navigation__icon .topBar{
+  position: absolute;
+  height: 3px;
+  width: 55px;
+  top: 10px;
+  background-color: #f7082d;
+  transition: all 800ms cubic-bezier(.9,0,.33,1);
+}
+
+.navigation__icon .middleBar{
+  height: 3px;
+  width:55px;
+  position: absolute;
+  top: 20px;
+  background-color: #f7082d;
+  transition: all 800ms cubic-bezier(.9,0,.33,1);
+}
+
+.navigation__icon .bottomBar{
+  height: 3px;
+  width:44px;
+  position: absolute;
+  top: 30px;
+  background-color: #f7082d;
+  transition: all 800ms cubic-bezier(.9,0,.33,1);
+}
+
+.navigation .navigation__ul{
+  float: right;
+  margin-top: 220px;
+  padding-right: 10px;
+  transform: translateX(-300px);
+  transition: all 800ms cubic-bezier(.9,0,.33,1);
+}
+
+.navigation .navigation__ul li {
+  list-style: none;
+  text-align: right;
+}
+
+.navigation .navigation__ul li a{
+  font-weight: 800;
+  font-size: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 15px;
+  color: black;
+}
+
+.navigation .navigation__ul li a:hover{
+  color: hsl(185, 96%, 33%);
+}
+
+.navigation-open{
+  width: 350px;
+  height: 100%;
+  background: #FFF;
+  border-radius: 0% 1% 1% 0%;
+}
+
+.navigation-open .navigation__icon{
+  left: 80%;
+}
+
+.navigation-open .topBar{
+  top: 23px;
+  transform: rotate(45deg);
+}
+
+.navigation-open .middleBar{
+  width: 0;
+  opacity: 1;
+  visibility: hidden;
+  translate:30px;
+}
+
+.navigation-open .bottomBar{
+  top: 23px;
+  width: 55px;
+  transform: rotate(-45deg);
+}
+
+.navigation-open .navigation__ul{
+  transform: translateX(0);
+
+}
+
+
+
+</style>
+</head>
+<body>
+
+  <nav class="navigation">
+    <section class="navigation__icon">
+      <span class="topBar"></span>
+      <span class="middleBar"></span>
+      <span class="bottomBar"></span>
+    </section>
+    <ul class="navigation__ul">
+      <li ><a href="">home</a></li>
+      <li ><a href="">about</a></li>
+      <li ><a href="">work</a></li>
+      <li ><a href="">contact</a></li>
+    </ul>
+  </nav>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+
+
+
+     $(function() {
+   $(".navigation__icon").click(function() {
+     $(".navigation").toggleClass('navigation-open');
+   });
+ });
+
+
+
+
+
+    </script>
+</body>
+</html>
