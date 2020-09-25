@@ -1,0 +1,103 @@
+
+.team{
+    margin: 75px 0;
+}
+
+.teamlist{
+    background-color: #fefee2;
+}
+
+h1{
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+}
+
+h1::after{
+    content: '';
+    height: 3px;
+    width: 150px;
+    background-color: #333;
+    display: block;
+    margin:10px auto;
+}
+
+.profile{
+    margin-top: 25px;
+}
+
+.profile .img-box{
+    position: relative;
+}
+
+.profile .img-box img{
+    width: 100%;
+    height: 100%;
+}
+
+.img-box::after{
+    content: '';
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.img-box ul{
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    opacity: 0;
+    margin: 0;
+    padding: 20px 0;
+    left: 25%;
+}
+
+.img-box ul li{
+    color: white;
+    border: 1px solid white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 3px;
+}
+
+.img-box ul a{
+    color: white;
+}
+
+.profile h2{
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.profile h3{
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.img-box:hover ul{
+    opacity: 1;
+}
+
+.img-box:hover::after{
+    opacity: 1;
+}
+
+.img-box a:hover li{
+    color: #007bff;
+    border: 1px solid #007bff;
+}
+
+
+.img-box ul, .img-box::after , .img-box ul li{
+    transition: all 0.5 ease-in-out 0s;
+} 
