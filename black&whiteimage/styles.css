@@ -1,0 +1,27 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+.box{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.box img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+ .box img{
+    filter: grayscale(1) contrast(5);
+}
+
+.box img:nth-child(2){
+    filter: grayscale(1) contrast(1) brightness(2);
+    mix-blend-mode: hard-light;
+}
