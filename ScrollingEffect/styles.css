@@ -1,0 +1,64 @@
+*{
+  padding: 0;
+  margin: 0;   
+}
+
+body{
+    min-height: 1500px;
+    background-color: #0a2a43;
+}
+
+ section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#text{
+    position: relative;
+    font-size: 200px;
+    font-weight: 800;
+    color: #fff;
+    z-index: 1;
+}
+
+section::before{
+    position: absolute;
+    content: '';
+    background:linear-gradient(to top, #0a2a43, transparent);
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 1000;
+}
+
+section::after{
+    position: absolute;
+    content: '';
+    background:#0a2a43;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    mix-blend-mode: color;
+}
+
+#road{
+    z-index: 2;
+}
+
+
